@@ -1,2 +1,2 @@
 # Test
-Onlu for test
+Only for test
