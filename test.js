@@ -1,15 +1,22 @@
 'use strict';
 
-function includes(array, value) {
-  // Change code below this line
-  for (let number of array) {
-    if (number === value) {
-      return true;
-    }
-  }
+const bankSystem = {
+  privat: 1000,
+  mono: 1500,
 
-  return false;
-  // Change code above this line
-}
+  getSum() {
+    const nameBank = prompt('Name bank');
 
-console.log(includes([1, 2, 3, 4, 5], 12));
+    return this[nameBank];
+  },
+
+  addCard() {
+    const newCard = prompt('Add name bank');
+    this[newCard] = 0;
+    console.log(this);
+  },
+};
+let a = [1, 2, 3, 4];
+a.concat([1, 2, 3, 4]);
+const result = _.add(2, 3);
+console.log(result); // 5
