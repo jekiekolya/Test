@@ -1,22 +1,19 @@
 'use strict';
 
-const bankSystem = {
-  privat: 1000,
-  mono: 1500,
+// Замикання
+// {function foo1(x) {
+//   let y = 3;
+//   function foo2(p) {
+//     console.log(p + y + x);
+//   }
 
-  getSum() {
-    const nameBank = prompt('Name bank');
+//   return foo2;
+// }
 
-    return this[nameBank];
-  },
+// let resPlus6 = foo1(3);
 
-  addCard() {
-    const newCard = prompt('Add name bank');
-    this[newCard] = 0;
-    console.log(this);
-  },
-};
-let a = [1, 2, 3, 4];
-a.concat([1, 2, 3, 4]);
-const result = _.add(2, 3);
-console.log(result); // 5
+// resPlus6(100);
+
+// console.dir(resPlus6);}
+
+console.log(Worker);

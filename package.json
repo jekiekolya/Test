@@ -1,0 +1,26 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "NPM basocs",
+  "main": "test.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jekiekolya/Test.git"
+  },
+  "author": "Kolya <bermykola@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jekiekolya/Test/issues"
+  },
+  "homepage": "https://github.com/jekiekolya/Test#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "joi": "^17.6.0"
+  }
+}
