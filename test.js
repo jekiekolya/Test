@@ -109,23 +109,43 @@
 // fetchRequest.switchTodo(12);
 // fetchRequest.updateTodo(12, true);
 
-let user1 = {
-  name: 'Petya',
-  setName: function (name) {
+class Samurai {
+  constructor(name) {
     this.name = name;
-  },
-};
+  }
 
-let user2 = {
-  name: 'Vasya',
-  age: 'TEST',
-};
+  hello() {
+    alert(this.name);
+  }
+}
 
-let newName = user1.setName.bind(user2);
+let shogun = new Samurai('Dimych');
+// console.log(shogun.__proto__.__proto__ === Object.prototype);
+// console.log(shogun);
+// console.log(shogun.__proto__.constructor.__proto__ === Function.prototype);
+// console.log(shogun.__proto__.__proto__.__proto__ === null);
 
-newName('name1');
+function generateHashtag(str) {
+  const testArrayLength = str.split('').filter(item => item !== ' ').length;
+  if (testArrayLength >= 140 || testArrayLength === 0) {
+    return false;
+  }
 
-newName('1231');
+  const arrayChars = str
+    .split(' ')
+    .filter(item => item !== '')
+    .map(item => {
+      const firstChar = item[0].toUpperCase();
+      const arrayItem = item.split('');
+      arrayItem.splice(0, 1, firstChar);
+      item = arrayItem.join('');
+      return item;
+    })
+    .join('');
 
-console.log(user1.setName);
-console.log(user2);
+  return `#${arrayChars}`;
+}
+
+generateHashtag(' Hello there thanks for trying my Kata');
+generateHashtag('Codewars');
+console.log(generateHashtag(' '.repeat(200)));
