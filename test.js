@@ -125,27 +125,17 @@ let shogun = new Samurai('Dimych');
 // console.log(shogun.__proto__.constructor.__proto__ === Function.prototype);
 // console.log(shogun.__proto__.__proto__.__proto__ === null);
 
-function generateHashtag(str) {
-  const testArrayLength = str.split('').filter(item => item !== ' ').length;
-  if (testArrayLength >= 140 || testArrayLength === 0) {
-    return false;
+function evenNumbers(array, number) {
+  let count = 0;
+  const res = [];
+  for (let i = 1; i < array.length + 1; i++) {
+    if (array[array.length - i] % 2 === 0) {
+      res.unshift(array[array.length - i]);
+      ++count;
+    }
+    if (count === number) break;
   }
-
-  const arrayChars = str
-    .split(' ')
-    .filter(item => item !== '')
-    .map(item => {
-      const firstChar = item[0].toUpperCase();
-      const arrayItem = item.split('');
-      arrayItem.splice(0, 1, firstChar);
-      item = arrayItem.join('');
-      return item;
-    })
-    .join('');
-
-  return `#${arrayChars}`;
+  return res;
 }
 
-generateHashtag(' Hello there thanks for trying my Kata');
-generateHashtag('Codewars');
-console.log(generateHashtag(' '.repeat(200)));
+console.log(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
