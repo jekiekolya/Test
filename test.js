@@ -109,33 +109,37 @@
 // fetchRequest.switchTodo(12);
 // fetchRequest.updateTodo(12, true);
 
-class Samurai {
-  constructor(name) {
-    this.name = name;
-  }
+// class Samurai {
+//   constructor(name) {
+//     this.name = name;
+//   }
 
-  hello() {
-    alert(this.name);
-  }
-}
+//   hello() {
+//     alert(this.name);
+//   }
+// }
 
-let shogun = new Samurai('Dimych');
+// let shogun = new Samurai('Dimych');
 // console.log(shogun.__proto__.__proto__ === Object.prototype);
 // console.log(shogun);
 // console.log(shogun.__proto__.constructor.__proto__ === Function.prototype);
 // console.log(shogun.__proto__.__proto__.__proto__ === null);
 
-function evenNumbers(array, number) {
-  let count = 0;
-  const res = [];
-  for (let i = 1; i < array.length + 1; i++) {
-    if (array[array.length - i] % 2 === 0) {
-      res.unshift(array[array.length - i]);
-      ++count;
-    }
-    if (count === number) break;
+var isAnagram = function (test, original) {
+  if (test.length !== original.length) {
+    return false;
   }
-  return res;
-}
 
-console.log(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
+  const arrTest = test.toLowerCase().split('');
+  const arrOriginal = original.toLowerCase().split('');
+
+  for (const item of arrTest) {
+    const index = arrOriginal.indexOf(item);
+    if (index !== -1) {
+      arrOriginal.splice(index, 1);
+    }
+  }
+
+  return arrOriginal.length === 0;
+};
+console.log(isAnagram('dumble', 'bumble'));
