@@ -143,3 +143,6 @@ var isAnagram = function (test, original) {
   return arrOriginal.length === 0;
 };
 console.log(isAnagram('dumble', 'bumble'));
+
+console.log(asd);
+let asd = 12;
