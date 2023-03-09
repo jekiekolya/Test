@@ -233,4 +233,3 @@ const toInitials = str => {
 };
 
 console.log('toInitials(Bill Gates)', toInitials('Bill Gates'));
-console.log('toInitials(elo mask)', toInitials('elo mask'));
