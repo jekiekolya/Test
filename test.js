@@ -507,7 +507,7 @@ const getObjWithTypes = arr => {
       objWithTypes.boolean.push(element);
     } else if (Array.isArray(element)) {
       objWithTypes.Array.push(element);
-    } else if (!!element === false) {
+    } else if (element === null) {
       objWithTypes.null.push(element);
     } else {
       objWithTypes.object.push(element);
@@ -517,37 +517,37 @@ const getObjWithTypes = arr => {
   return objWithTypes;
 };
 
-// console.log(
-//   'getObjWithTypes()',
-//   getObjWithTypes([
-//     { value: 1 },
-//     { value: 2 },
-//     5,
-//     6,
-//     7,
-//     'test',
-//     'test2',
-//     'test3',
-//     'test4',
-//     false,
-//     null,
-//     undefined,
-//     [123],
-//     [456],
-//   ])
-// );
+console.log(
+  'getObjWithTypes()',
+  getObjWithTypes([
+    { value: 1 },
+    { value: 2 },
+    5,
+    6,
+    7,
+    'test',
+    'test2',
+    'test3',
+    'test4',
+    false,
+    null,
+    undefined,
+    [123],
+    [456],
+  ])
+);
 
 // const text =
 //   'Hello Mike. Here is my phone number +38 (098) 330-00-03, my wife phone number 068-339-09-09 and my sun number 0683390791. Please use same country code +38 to have opportunity to call me';
 // // ['38 (098) 330-00-03', '068-339-09-09', '0683390791'];
 
-const getPhoneNumbers = text => {
-  const regex = /(\d{2}\s)?(\(?\d{3}\)?[\s-]?)?\d{3}[-]?\d{2}[-]?\d{2}/g;
+// const getPhoneNumbers = text => {
+//   const regex = /(\d{2}\s)?(\(?\d{3}\)?[\s-]?)?\d{3}[-]?\d{2}[-]?\d{2}/g;
 
-  const matches = text.match(regex);
+//   const matches = text.match(regex);
 
-  return matches;
-};
+//   return matches;
+// };
 
 // console.log('getPhoneNumbers(text)', getPhoneNumbers(text));
 
@@ -563,16 +563,16 @@ const getPhoneNumbers = text => {
   },
 } */
 
-function getNestedObject(keys, value) {
-  const arr = keys.split('.');
+// function getNestedObject(keys, value) {
+//   const arr = keys.split('.');
 
-  const obj = {};
+//   const obj = {};
 
-  obj[arr[0]] = { [arr[1]]: { [arr[2]]: { [arr[3]]: { [arr[4]]: value } } } };
+//   obj[arr[0]] = { [arr[1]]: { [arr[2]]: { [arr[3]]: { [arr[4]]: value } } } };
 
-  return obj;
-}
+//   return obj;
+// }
 
-const result = getNestedObject('value1.value2.value3.value4.value5', 'Random string');
+// const result = getNestedObject('value1.value2.value3.value4.value5', 'Random string');
 
-console.log(result);
+// console.log(result);
