@@ -671,3 +671,24 @@
 // console.log('isClass(MyClass)', isClass(MyClass));
 
 // console.log('isClass(myFunction)', isClass(myFunction));
+
+// const myArr = [1, 2, 3, 4, 5];
+
+// for (const key in myArr) {
+//   console.log('key', key);
+//   console.log('value', myArr[key]);
+// }
+
+// console.log(isNaN('NaN'));
+// console.log(Number.isNaN('NaN'));
+
+// const numObj = 77.1234;
+// console.log(numObj.toPrecision()); // "77.1234"
+// console.log(numObj.toPrecision(1)); // "8e+1"
+// console.log(numObj.toPrecision(2)); // "77"
+// console.log(numObj.toPrecision(5)); // "77.123"
+// console.log(numObj.toPrecision(10)); // "77.12340000"
+
+const numObj = new Number(42); // create a Number object
+const result = numObj + 10; // implicit conversion to primitive value
+console.log(result); // 52 (number)
