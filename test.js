@@ -577,23 +577,97 @@
 
 // console.log(result);
 
-'use strict';
 // --------------------------- DELETE ------------------------
-const person = { name: 'Mike', age: 30 };
-console.log(person);
-delete person.age;
-console.log(person); // {name: 'Mike'}
+// const person = { name: 'Mike', age: 30 };
+// console.log(person);
+// delete person.age;
+// console.log(person); // {name: 'Mike'}
 
-const numArr = [1, 2, 3, 4, 5];
-console.log(numArr);
-delete numArr[2];
-console.log(numArr); // [1, 2, empty, 4, 5]
-console.log(numArr[2]); // undefined
+// const numArr = [1, 2, 3, 4, 5];
+// console.log(numArr);
+// delete numArr[2];
+// console.log(numArr); // [1, 2, empty, 4, 5]
+// console.log(numArr[2]); // undefined
 
-console.log('typeof (1n)', typeof 1n); // typeof (1n) bigint
-const bigNum = BigInt(123456);
-console.log('bigNum', bigNum); //bigNum 123456n
+// --------------------------- Types ------------------------
+// const myClass = class MyClass {
+//   constructor() {}
+// };
 
-const mySymbol = Symbol('mySymbol');
-console.log('typeof mySymbol', typeof Symbol('mySymbol')); // symbol
-console.log(mySymbol instanceof Symbol); // false
+// console.log(myClass.toString());
+// console.log('typeof (1n)', typeof 1n); // typeof (1n) bigint
+// const bigNum = BigInt(123456);
+// console.log('bigNum', bigNum); //bigNum 123456n
+
+// const mySymbol = Symbol(myClass);
+// console.log(mySymbol, typeof Symbol('mySymbol')); // symbol
+// console.log(mySymbol instanceof Symbol); // false
+
+// const myObj = new Object();
+// const myArr = new Array();
+
+// console.log('myObj', myObj);
+// console.log('myArr', myArr);
+
+// --------------------------- new Map ------------------------
+
+// const myMap = new Map();
+// myMap.set([1, 2], [3, 4]);
+// myMap.set({ key: 'key' }, 'Value');
+// myMap.set(class MyClass {}, 'Value');
+// myMap.set(12, '1');
+// myMap.set(12, '1');
+
+// console.log('myMap.get(12)', myMap.get(12));
+
+// console.log('myMap', myMap);
+// console.log('myMap.size', myMap.size);
+
+// --------------------------- new Set ------------------------
+
+// const mySet = new Set();
+// mySet.add(1);
+// mySet.add(2);
+// mySet.add(2);
+// mySet.add(2);
+
+// mySet.size; // 2
+// console.log('mySet.has(3)', mySet.has(3)); // false
+// console.log('mySet', mySet);
+
+// const unique = new Set([1, 2, 3, 3, 4]);
+// console.log('Array.isArray(unique)', Array.isArray(unique)); // false
+// console.log('unique', unique); // Set(4) {1, 2, 3, 4}
+// console.log('unique instanceof Set', unique instanceof Set); // true
+
+// --------------------------- new WeakMap ------------------------
+
+// const myWeakMap = new WeakMap();
+
+// myWeakMap.set(function asd() {}, 1); // WeakMap {{}: 1}
+// //  Only object keys (references)
+
+// console.log('myWeakMap', myWeakMap);
+
+// --------------------------- new WeakSet ------------------------
+// const myWeakSet = new WeakSet();
+
+// myWeakSet.add({});
+// //  Only object (references)
+
+// console.log('myWeakSet', myWeakSet);
+
+// --------------------------- Class ------------------------
+// class MyClass {}
+// function myFunction() {}
+// const myNewFunction = function () {};
+// console.dir(MyClass.toString()); // {constructor: f}
+// console.dir(myFunction.toString()); // {constructor: f}
+
+// function isClass(obj) {
+//   return 'class' === obj.toString().split(' ')[0];
+// }
+
+// console.log('isClass(MyClass)', isClass(MyClass));
+
+// console.log('isClass(myFunction)', isClass(myFunction));
