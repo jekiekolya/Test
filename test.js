@@ -485,57 +485,57 @@
 
 // ----------------------------------------------------------------
 
-const getObjWithTypes = arr => {
-  const objWithTypes = {
-    object: [],
-    number: [],
-    string: [],
-    boolean: [],
-    null: [],
-    undefined: [],
-    Array: [],
-  };
+// const getObjWithTypes = arr => {
+//   const objWithTypes = {
+//     object: [],
+//     number: [],
+//     string: [],
+//     boolean: [],
+//     null: [],
+//     undefined: [],
+//     Array: [],
+//   };
 
-  arr.forEach(element => {
-    if (typeof element === 'number') {
-      objWithTypes.number.push(element);
-    } else if (typeof element === 'undefined') {
-      objWithTypes.undefined.push(element);
-    } else if (typeof element === 'string') {
-      objWithTypes.string.push(element);
-    } else if (typeof element === 'boolean') {
-      objWithTypes.boolean.push(element);
-    } else if (Array.isArray(element)) {
-      objWithTypes.Array.push(element);
-    } else if (element === null) {
-      objWithTypes.null.push(element);
-    } else {
-      objWithTypes.object.push(element);
-    }
-  });
+//   arr.forEach(element => {
+//     if (typeof element === 'number') {
+//       objWithTypes.number.push(element);
+//     } else if (typeof element === 'undefined') {
+//       objWithTypes.undefined.push(element);
+//     } else if (typeof element === 'string') {
+//       objWithTypes.string.push(element);
+//     } else if (typeof element === 'boolean') {
+//       objWithTypes.boolean.push(element);
+//     } else if (Array.isArray(element)) {
+//       objWithTypes.Array.push(element);
+//     } else if (element === null) {
+//       objWithTypes.null.push(element);
+//     } else {
+//       objWithTypes.object.push(element);
+//     }
+//   });
 
-  return objWithTypes;
-};
+//   return objWithTypes;
+// };
 
-console.log(
-  'getObjWithTypes()',
-  getObjWithTypes([
-    { value: 1 },
-    { value: 2 },
-    5,
-    6,
-    7,
-    'test',
-    'test2',
-    'test3',
-    'test4',
-    false,
-    null,
-    undefined,
-    [123],
-    [456],
-  ])
-);
+// console.log(
+//   'getObjWithTypes()',
+//   getObjWithTypes([
+//     { value: 1 },
+//     { value: 2 },
+//     5,
+//     6,
+//     7,
+//     'test',
+//     'test2',
+//     'test3',
+//     'test4',
+//     false,
+//     null,
+//     undefined,
+//     [123],
+//     [456],
+//   ])
+// );
 
 // const text =
 //   'Hello Mike. Here is my phone number +38 (098) 330-00-03, my wife phone number 068-339-09-09 and my sun number 0683390791. Please use same country code +38 to have opportunity to call me';
@@ -576,3 +576,24 @@ console.log(
 // const result = getNestedObject('value1.value2.value3.value4.value5', 'Random string');
 
 // console.log(result);
+
+'use strict';
+// --------------------------- DELETE ------------------------
+const person = { name: 'Mike', age: 30 };
+console.log(person);
+delete person.age;
+console.log(person); // {name: 'Mike'}
+
+const numArr = [1, 2, 3, 4, 5];
+console.log(numArr);
+delete numArr[2];
+console.log(numArr); // [1, 2, empty, 4, 5]
+console.log(numArr[2]); // undefined
+
+console.log('typeof (1n)', typeof 1n); // typeof (1n) bigint
+const bigNum = BigInt(123456);
+console.log('bigNum', bigNum); //bigNum 123456n
+
+const mySymbol = Symbol('mySymbol');
+console.log('typeof mySymbol', typeof Symbol('mySymbol')); // symbol
+console.log(mySymbol instanceof Symbol); // false
