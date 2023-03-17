@@ -689,6 +689,4 @@
 // console.log(numObj.toPrecision(5)); // "77.123"
 // console.log(numObj.toPrecision(10)); // "77.12340000"
 
-const numObj = new Number(42); // create a Number object
-const result = numObj + 10; // implicit conversion to primitive value
-console.log(result); // 52 (number)
+console.log(isInteger('10')); // 0
