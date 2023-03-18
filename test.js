@@ -689,4 +689,60 @@
 // console.log(numObj.toPrecision(5)); // "77.123"
 // console.log(numObj.toPrecision(10)); // "77.12340000"
 
-console.log(isInteger('10')); // 0
+// const num4 = ['age', 2, {}];
+// console.log(num4.toString()); // "NaN"
+
+// ---------------------------------------- .at ----------------------------------------
+
+// const str = 'hello world';
+// console.log(str.charCodeAt(1)); // "101"
+// console.log(str.charCodeAt(4)); // "111"
+// // In the example above, the Unicode value for the character "e" at index 1 is 101.
+
+// console.log(str.charCodeAt(5)); // "32"
+// console.log(str.charCodeAt(20)); // "NaN"
+// console.log(str.charCodeAt(-1)); // "NaN"
+// console.log(str.charCodeAt(-2)); // "NaN"
+
+// --------------------------------------- .concat --------------------------------------
+// function con(str) {
+//   result = str;
+//   return result;
+// }
+
+// const str1 = 'Hello';
+// const str2 = 'World';
+// const str3 = '!';
+// const result = str1.concat(', ', str2, str3);
+// console.log(result); // Output: "Hello, World!"
+
+// --------------------------------------- .endsWith --------------------------------------
+
+// const str = 'Hello, World!';
+// console.log(str.endsWith('World!')); // Output: true
+// console.log(str.endsWith('!')); // Output: true
+// console.log(str.endsWith('World!', 20)); // Output: true
+// console.log(str.endsWith('World!', 13)); // Output: true
+// console.log(str.endsWith('World!', 12)); // Output: false
+
+// const str2 = 'as null';
+
+// console.log(str2.endsWith(null)); // true
+// console.log(str2.endsWith('to b2')); // false
+// console.log(str2.endsWith('to b2', 19)); // true
+
+// --------------------------------------- .includes --------------------------------------
+
+// const str = 'Hello, World!';
+// console.log(str.lastIndexOf('World')); // Output: 7
+// console.log(str.lastIndexOf('!')); // Output: 12
+// console.log(str.lastIndexOf('hello')); // Output: -1
+
+// console.log(str.lastIndexOf(',')); // Output: 5
+// console.log(str.lastIndexOf('Hello')); // Output: 0
+// console.log(str.lastIndexOf('Hello', 2)); // Output: 0
+
+// console.log(str.lastIndexOf('l', 0)); // Output: -1
+// console.log(str.indexOf('l', 0)); // Output: 2
+// console.log(str.lastIndexOf('l')); // Output: 10
+// console.log(str.indexOf('l')); // Output: 2
