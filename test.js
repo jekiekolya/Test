@@ -757,6 +757,23 @@
 // console.log(str.padEnd(10)); // Output: "Hello     "
 // console.log(str.padEnd(10, '-')); // Output: "Hello-----"
 
-const str = 'The quick brown fox jumps over the lazy dog.';
-const newStr = str.replace(/the/gi, 'a');
-console.log(newStr); // Output: "a quick brown fox jumps over a lazy dog."
+// --------------------------------------- .replace --------------------------------------
+// const str = 'The quick brown fox jumps over the lazy dog.';
+// const newStr = str.replace(/the/gi, 'a');
+// console.log(newStr); // Output: "a quick brown fox jumps over a lazy dog."
+
+// --------------------------------------- .search --------------------------------------
+// const str = 'The quick brown fox jumps over the lazy dog.';
+// const index = str.search(/brown/g);
+// console.log(index); // Output: 10
+
+// const str = 'The quick brown fox jumps over the lazy dog.';
+// const singleElementArray = str.split('', 2);
+// console.log(singleElementArray);
+
+const str = 'hello world';
+const sliceResult = str.slice(3, 7); // 'lo w'
+const substringResult = str.substring(7, 3); // 'lo w' Автоматично поміняє індекси місцями
+
+console.log('sliceResult', sliceResult);
+console.log('substringResult', substringResult);
