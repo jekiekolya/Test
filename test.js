@@ -746,3 +746,17 @@
 // console.log(str.indexOf('l', 0)); // Output: 2
 // console.log(str.lastIndexOf('l')); // Output: 10
 // console.log(str.indexOf('l')); // Output: 2
+
+// --------------------------------------- .match --------------------------------------
+// const str = 'The quick brown fox jumps over the lazy dog';
+// const matches = [...str.matchAll(/o/g)];
+// console.log(matches);
+
+// --------------------------------------- .padEnd --------------------------------------
+// const str = 'Hello';
+// console.log(str.padEnd(10)); // Output: "Hello     "
+// console.log(str.padEnd(10, '-')); // Output: "Hello-----"
+
+const str = 'The quick brown fox jumps over the lazy dog.';
+const newStr = str.replace(/the/gi, 'a');
+console.log(newStr); // Output: "a quick brown fox jumps over a lazy dog."
