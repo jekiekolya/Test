@@ -771,9 +771,23 @@
 // const singleElementArray = str.split('', 2);
 // console.log(singleElementArray);
 
-const str = 'hello world';
-const sliceResult = str.slice(3, 7); // 'lo w'
-const substringResult = str.substring(7, 3); // 'lo w' Автоматично поміняє індекси місцями
+// const str = 'hello world';
+// const sliceResult = str.slice(3, 7); // 'lo w'
+// const substringResult = str.substring(7, 3); // 'lo w' Автоматично поміняє індекси місцями
 
-console.log('sliceResult', sliceResult);
-console.log('substringResult', substringResult);
+// console.log('sliceResult', sliceResult);
+// console.log('substringResult', substringResult);
+
+// EX1
+
+// const checkSafeIntegerNumber = function (num) {
+//   const result = Number.isSafeInteger(num);
+
+//   console.log(num, result);
+// };
+
+// checkSafeIntegerNumber(-25);
+// checkSafeIntegerNumber(-25.3);
+// checkSafeIntegerNumber(2);
+// checkSafeIntegerNumber(2 ** 52);
+// checkSafeIntegerNumber(2 ** 53);
