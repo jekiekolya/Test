@@ -790,4 +790,41 @@
 // checkSafeIntegerNumber(-25.3);
 // checkSafeIntegerNumber(2);
 // checkSafeIntegerNumber(2 ** 52);
-// checkSafeIntegerNumber(2 ** 53);
+checkSafeIntegerNumber(2 ** 53);
+
+// EX2
+
+// const getFixedString = (str, decimalNum) => {
+//   const result = Number(str).toFixed(decimalNum).toString();
+
+//   console.log(str, result);
+// };
+
+// getFixedString('23.124324', 2);
+// getFixedString('23.124324', 1);
+
+// EX3
+
+// const convertNumberToExponential = function (num) {
+//   const result = num.toExponential();
+
+//   console.log(num, result);
+// };
+
+// convertNumberToExponential(21337523);
+// convertNumberToExponential(1);
+// convertNumberToExponential(23.5);
+
+// EX4
+
+// const isValidInteger = function (str) {
+//   const numberIndex = str.split('').findIndex(item => !!Number(item));
+//   const newStr = str.slice(numberIndex);
+//   const isInteger = Number.isInteger(Number.parseInt(newStr));
+
+//   console.log(str, isInteger);
+// };
+
+// isValidInteger('123123jksdf');
+// isValidInteger('asd23');
+// isValidInteger('asddasd');
