@@ -790,7 +790,6 @@
 // checkSafeIntegerNumber(-25.3);
 // checkSafeIntegerNumber(2);
 // checkSafeIntegerNumber(2 ** 52);
-checkSafeIntegerNumber(2 ** 53);
 
 // EX2
 
@@ -828,3 +827,125 @@ checkSafeIntegerNumber(2 ** 53);
 // isValidInteger('123123jksdf');
 // isValidInteger('asd23');
 // isValidInteger('asddasd');
+
+// ================================================================================
+// EX1
+// const isOnlyNumerical = string => {
+//   const num = Number(string);
+
+//   console.log(!Number.isNaN(num));
+// };
+
+// isOnlyNumerical('12312312312');
+// isOnlyNumerical('12312312312F');
+
+// EX2
+// const isSafeIntegerMin = arr => {
+//   const newArr = arr.filter(item => Number.isSafeInteger(item));
+
+//   console.log(Math.min(...newArr));
+//   return Math.min(...newArr);
+// };
+
+// isSafeIntegerMin([12, 4, 69, 82, 65, 4, 9, 7, 215, 7]);
+// isSafeIntegerMin([2 ** 53, 2 ** 55, 2 ** 50]);
+
+// EX3
+// const strEndedSubstr = (str, substr) => {
+//   const res = str.endsWith(substr);
+
+//   console.log(res);
+// };
+
+// strEndedSubstr('Hello', 'llo');
+// strEndedSubstr('Hello', 'e');
+
+// EX4
+
+// const sumIntegerNumber = arr => {
+//   const sumSafeIntegerNumber = arr.reduce((acc, item) => {
+//     if (Number.isSafeInteger(item)) {
+//       return acc + item;
+//     } else {
+//       return acc;
+//     }
+//   }, 0);
+
+//   const sumIntegerNumber = arr.reduce((acc, item) => {
+//     return acc + Math.floor(item);
+//   }, 0);
+
+//   console.log('sumSafeIntegerNumber', sumSafeIntegerNumber);
+//   console.log('sumIntegerNumber', sumIntegerNumber);
+// };
+
+// sumIntegerNumber([125.1, 2, 1, 23.5, 69.1]);
+
+// EX5
+
+// const firstLetter = str => {
+//   const arr = str.split(' ');
+
+//   const firstLetterArr = arr.map(item => item.at(0));
+
+//   console.log('firstLetterArr', firstLetterArr);
+// };
+
+// firstLetter('I love you, my cat');
+
+// EX6
+
+// const convertNumberWithDecimals = num => {
+//   console.log(num.toFixed(num));
+// };
+
+// convertNumberWithDecimals(2);
+// convertNumberWithDecimals(5);
+
+// EX7
+// const findMinEvenNumber = arr => {
+//   const arrEvenNumber = arr.filter(item => item % 2 === 0);
+
+//   const minNumber = Math.min(...arrEvenNumber);
+
+//   console.log(minNumber);
+// };
+
+// findMinEvenNumber([12, 1, 3, 5, 7, 8.0, 11, 44]);
+
+// EX8
+
+// const replaceWords = (str, oldSubStr, newSubStr) => {
+//   const newStr = str.replace(oldSubStr, newSubStr);
+
+//   console.log(newStr);
+// };
+
+// replaceWords('Hello world, i love you!', 'world', 'cat');
+
+// EX9
+// const firstIndexConnect = (arr, subStr) => {
+//   const index = arr.findIndex(item => item.startsWith(subStr));
+
+//   console.log(index);
+// };
+
+// firstIndexConnect(['hello', 'world, i', 'love you!', 'world', 'cat'], 'hes');
+
+// EX10
+// const countMatches = (str, subStr) => {
+//   const matches = str.matchAll(subStr);
+
+//   console.log([...matches].length);
+// };
+
+// countMatches('I love you!ooo', 'o');
+
+// const myDate = Date.now(); // 1679252208851
+// const myDate2 = new Date(); // Sun Mar 19 2023 20:56:59 GMT+0200 (Восточная Европа, стандартное время)
+
+// console.log(myDate instanceof Date); // false
+// console.log(myDate2 instanceof Date); // true
+
+// const myDate3 = new Date(myDate); // Sun Mar 19 2023 20:56:59 GMT+0200 (Восточная Европа, стандартное время)
+// console.log(myDate3 instanceof Date); // true
