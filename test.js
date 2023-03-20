@@ -949,3 +949,82 @@
 
 // const myDate3 = new Date(myDate); // Sun Mar 19 2023 20:56:59 GMT+0200 (Восточная Европа, стандартное время)
 // console.log(myDate3 instanceof Date); // true
+// Date.prototype.valueOf = () => {
+//   console.log('asdfajs');
+// };
+
+// Date.prototype.toString = () => {
+//   console.log('asdasdasdsd');
+// };
+// const Date1 = new Date('2022-12-30');
+// const Date2 = new Date();
+
+// console.log(Date2 + Date1);
+
+// var input = 'http://www.google-test1.com';
+
+// const regex = /^http(s?):\/\/([a-z]+\.)?[a-z0-9\-]+.com$/i;
+
+// console.log(input.match(regex));
+
+// const text = 'We bought 5 dedicated servers and provide them to our 3 new devops.';
+
+// const extractNumbersWithoutRegExp = text => {
+//   const arr = [];
+
+//   for (const i of text) {
+//     if (!isNaN(i) && i !== ' ') {
+//       arr.push(+i);
+//     }
+//   }
+
+//   return arr;
+// };
+
+// // expected result [5, 3]
+
+// const serverAndDevops = extractNumbersWithoutRegExp(text);
+
+// const spreadServersBeetweenDevops = ([servers, devOps]) => {
+//   const res = {};
+
+//   const equal = Math.round(servers / devOps);
+
+//   for (let i = 1; i <= devOps; i++) {
+//     if (servers < equal) {
+//       res[`devOps-${i}`] = equal - 1;
+//     } else {
+//       res[`devOps-${i}`] = equal;
+//     }
+
+//     servers = servers - equal;
+//   }
+
+//   console.log(res);
+// };
+
+// // expected result { 'devOps-1': 2, 'devOps-2': 2, 'devOps-3': 1 }
+
+// spreadServersBeetweenDevops(serverAndDevops);
+// spreadServersBeetweenDevops([7, 2]);
+
+const getRandomEl = items => {
+  var item = items[Math.floor(Math.random() * items.length)];
+  return item;
+};
+
+const request = 1000000;
+const ads = [
+  { name: 'ad1', price: 1.8, show: 0 },
+  { name: 'ad2', price: 1.75, show: 0 },
+  { name: 'ad3', price: 1.33, show: 0 },
+  { name: 'ad4', price: 0.48, show: 0 },
+];
+
+for (let i = 0; i < request; i++) {
+  const randomAd = getRandomEl(ads);
+
+  randomAd.show += 1;
+}
+
+console.log(ads);
