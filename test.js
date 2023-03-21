@@ -618,10 +618,17 @@
 // myMap.set(12, '1');
 // myMap.set(12, '1');
 
-// console.log('myMap.get(12)', myMap.get(12));
+// console.log('myMap.get(12)', myMap.get(12)); // 1
 
 // console.log('myMap', myMap);
-// console.log('myMap.size', myMap.size);
+// // Map(4) {
+// //   [ 1, 2 ] => [ 3, 4 ],
+// //   { key: 'key' } => 'Value',
+// //   [class MyClass] => 'Value',
+// //   12 => '1'
+// // }
+
+// console.log('myMap.size', myMap.size); // 4
 
 // --------------------------- new Set ------------------------
 
@@ -644,10 +651,31 @@
 
 // const myWeakMap = new WeakMap();
 
-// myWeakMap.set(function asd() {}, 1); // WeakMap {{}: 1}
+// myWeakMap.set(function asd() {}, {}); // WeakMap {{}: 1}
 // //  Only object keys (references)
+// const arr = [1, 2];
+// myWeakMap.set(arr, [3, 4]);
+// myWeakMap.set({ key: 'key' }, 'Value');
+// const myClass = class MyClass {};
+// myWeakMap.set(myClass, 'Value');
 
+// const obj1 = {};
+// const obj2 = {};
+
+// myWeakMap.set(obj1, 'value1');
+// myWeakMap.set(obj2, 'value2');
+// // myWeakMap.set(12, '1');
+// // myWeakMap.set(12, '1');
+// myWeakMap.get(myClass); // 'Value'
 // console.log('myWeakMap', myWeakMap);
+
+// WeakMap {Array(2) => Array(2), ƒ => {…}, {…} => 'value1', {…} => 'value2', {…} => 'Value', …}
+// [[Entries]]
+// 0 : { Array(2) => Array(2) };
+// 1 : { Object => "value1" };
+// 2 : {Object => "value2"}
+// 3 : {class MyClass {} => "Value"}
+// [[Prototype]] : WeakMap
 
 // --------------------------- new WeakSet ------------------------
 // const myWeakSet = new WeakSet();
