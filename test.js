@@ -1087,4 +1087,11 @@
 // }
 
 // // 5 step
-// console.log(ads);
+// console.log(parseInt('08'));
+
+let audi = { wheels: 4 };
+let tesla = audi;
+
+delete audi.wheels;
+
+console.log(audi.wheels, tesla.wheels);

@@ -75,17 +75,18 @@
 
 // console.log(person); // Output: { name: 'John', age: 30, gender: 'male' }
 
-console.log(Object.is(1, 1)); // Output: true
-console.log(Object.is(1, '1')); // Output: false
+// console.log(Object.is(1, 1)); // Output: true
+// console.log(Object.is(1, '1')); // Output: false
 
-console.log(Object.is(NaN, NaN)); // Output: true
-console.log(NaN === NaN); // Output: false
+// console.log(Object.is(NaN, NaN)); // Output: true
+// console.log(NaN === NaN); // Output: false
 
-console.log(Object.is(0, -0)); // Output: false
-console.log(0 === -0); // Output: true
+// console.log(Object.is(0, -0)); // Output: false
+// console.log(0 === -0); // Output: true
 
-console.log(Object.is([], [])); // Output: false
-console.log(Object.is(null, null)); // Output: true
+// console.log(Object.is([], [])); // Output: false
+// console.log(Object.is(null, null)); // Output: true
 
-const obj = {};
-console.log(Object.is(obj, {})); // Output: false
+// const obj = {};
+// console.log(Object.is(obj, {})); // Output: false
+console.log(parseInt('08'));
