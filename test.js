@@ -1013,50 +1013,50 @@
 //   return item;
 // };
 
-const request = 1000000;
-const ads = [
-  { name: 'ad1', price: 1.8, show: 0 },
-  { name: 'ad2', price: 1.75, show: 0 },
-  { name: 'ad3', price: 1.33, show: 0 },
-  { name: 'ad4', price: 0.48, show: 0 },
-];
+// const request = 1000000;
+// const ads = [
+//   { name: 'ad1', price: 1.8, show: 0 },
+//   { name: 'ad2', price: 1.75, show: 0 },
+//   { name: 'ad3', price: 1.33, show: 0 },
+//   { name: 'ad4', price: 0.48, show: 0 },
+// ];
 
-// 1 and 2 steps
-let sumPrice = 0;
+// // 1 and 2 steps
+// let sumPrice = 0;
 
-for (const ad of ads) {
-  sumPrice += ad.price;
-}
+// for (const ad of ads) {
+//   sumPrice += ad.price;
+// }
 
-for (let i = 0; i < ads.length; i++) {
-  // For compare with shows
-  ads[i].percentage = ads[i].price / sumPrice;
+// for (let i = 0; i < ads.length; i++) {
+//   // For compare with shows
+//   ads[i].percentage = ads[i].price / sumPrice;
 
-  // Add MIN and MAX values
-  if (i === 0) {
-    ads[i].minValue = 0;
-  } else {
-    ads[i].minValue = ads[i - 1].maxValue;
-  }
+//   // Add MIN and MAX values
+//   if (i === 0) {
+//     ads[i].minValue = 0;
+//   } else {
+//     ads[i].minValue = ads[i - 1].maxValue;
+//   }
 
-  if (i === 0) {
-    ads[i].maxValue = ads[i].price / sumPrice;
-  } else {
-    ads[i].maxValue = ads[i].price / sumPrice + ads[i - 1].maxValue;
-  }
-}
+//   if (i === 0) {
+//     ads[i].maxValue = ads[i].price / sumPrice;
+//   } else {
+//     ads[i].maxValue = ads[i].price / sumPrice + ads[i - 1].maxValue;
+//   }
+// }
 
-// 3 and 4 steps
-for (let i = 0; i < request; i++) {
-  const randomAd = Math.random();
+// // 3 and 4 steps
+// for (let i = 0; i < request; i++) {
+//   const randomAd = Math.random();
 
-  for (const ad of ads) {
-    if (ad.minValue < randomAd && ad.maxValue > randomAd) {
-      ad.show += 1;
-      break;
-    }
-  }
-}
+//   for (const ad of ads) {
+//     if (ad.minValue < randomAd && ad.maxValue > randomAd) {
+//       ad.show += 1;
+//       break;
+//     }
+//   }
+// }
 
-// 5 step
-console.log(ads);
+// // 5 step
+// console.log(ads);
