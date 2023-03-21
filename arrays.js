@@ -28,8 +28,16 @@
 
 // console.log('newArr', newArr);
 
-const arr = ['a', , 'c'];
-const sparseKeys = Object.keys(arr);
-const denseKeys = [...arr.keys()];
-console.log(sparseKeys); // ['0', '2']
-console.log(denseKeys); // [0, 1, 2]
+// const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+// console.log(animals.slice(2)); // ["camel", "duck", "elephant"]
+// console.log(animals.slice(2, 4)); // ["camel", "duck"]
+// console.log(animals.slice(1, 5)); // ["bison", "camel", "duck", "elephant"]
+// console.log(animals.slice(-2)); // ["duck", "elephant"]
+// console.log(animals.slice(2, -1)); // ["camel", "duck"]
+// console.log(animals.slice()); // ["ant", "bison", "camel", "duck", "elephant"]
+// console.log(animals.slice(5, 1)); // []
+
+const array1 = [1, 2, 'a', '1a'];
+
+console.log(array1.toString()); // "1,2,a,1a"
