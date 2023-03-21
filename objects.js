@@ -28,17 +28,26 @@
 //   },
 // });
 
-const person = {
-  name: 'John',
-  age: 30,
-  gender: 'male',
-};
+// const person = {
+//   name: 'John',
+//   age: 30,
+//   gender: 'male',
+//   greet() {
+//     console.log(`Hello, my name is ${this.name}`);
+//   },
+// };
 
-const details = {
-  occupation: 'engineer',
-  location: 'New York',
-};
+// const details = {
+//   occupation: 'engineer',
+//   location: 'New York',
+// };
 
-const personDetails = Object.assign({}, person, details);
+// const personDetails = Object.assign(
+//   { occupation1: 'engineer', location1: 'New York' },
+//   person,
+//   details
+// );
+// const personDetails2 = Object.assign([], person, details);
+// const personDetails3 = Object.assign(new String(), person, details);
 
-console.log(personDetails);
+// console.log(personDetails);
