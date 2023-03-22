@@ -38,6 +38,9 @@
 // console.log(animals.slice()); // ["ant", "bison", "camel", "duck", "elephant"]
 // console.log(animals.slice(5, 1)); // []
 
-const array1 = [1, 2, 'a', '1a'];
+// const array1 = [1, 2, 'a', '1a'];
 
-console.log(array1.toString()); // "1,2,a,1a"
+// console.log(array1.toString()); // "1,2,a,1a"
+
+console.log('new Date()', new Date([])); // Invalid Date
+console.log('Date.now()', Date.now([])); // 1679517932540
